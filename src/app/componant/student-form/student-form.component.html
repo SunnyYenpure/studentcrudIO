@@ -1,0 +1,40 @@
+<div class="card mb-4">
+  <div class="card-body">
+    <form #studentform="ngForm" (ngSubmit)="onstudentAdd()">
+
+      <div class="form-group mb-2">
+        <label for="fname">First Name</label>
+        <input type="text" class="form-control" id="fname" name="fname" ngModel required #fname="ngModel" />
+        <div class="text-danger" *ngIf="fname.invalid && fname.touched">First Name is required</div>
+      </div>
+
+      <div class="form-group mb-2">
+        <label for="lname">Last Name</label>
+        <input type="text" class="form-control" id="lname" name="lname" ngModel required #lname="ngModel" />
+        <div class="text-danger" *ngIf="lname.invalid && lname.touched">Last Name is required</div>
+      </div>
+
+      <div class="form-group mb-2">
+        <label for="nickname">Nickname</label>
+        <input type="text" class="form-control" id="nickname" name="nickname" ngModel required #nickname="ngModel" />
+        <div class="text-danger" *ngIf="nickname.invalid && nickname.touched">Nickname is required</div>
+      </div>
+
+      <div class="form-group mb-2">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" ngModel required #email="ngModel" />
+        <div class="text-danger" *ngIf="email.invalid && email.touched">Email is required</div>
+      </div>
+
+      <div class="form-group mb-2">
+        <label for="contact">Contact</label>
+        <input type="text" class="form-control" id="contact" name="contact" ngModel required #contact="ngModel" />
+        <div class="text-danger" *ngIf="contact.invalid && contact.touched">Contact is required</div>
+      </div>
+
+      <button type="submit" class="btn btn-block btn-outline-primary btn-sm" [disabled]="studentform.invalid">
+        {{ selectedStudent ? 'Update Student' : 'Add Student' }}
+      </button>
+    </form>
+  </div>
+</div>

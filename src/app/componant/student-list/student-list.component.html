@@ -1,0 +1,40 @@
+<div class="table-container" *ngIf="getstdinfo && getstdinfo.length > 0; else noStudent">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Sr.No</th>
+        <th>Full Name</th>
+        <th>Nickname</th>
+        <th>Email</th>
+        <th>Contact</th>
+        <th>Edit</th>
+        <th>Remove</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let std of getstdinfo; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ std.fname }} {{ std.lname }}</td>
+        <td>{{ std.nickname }}</td>
+        <td>{{ std.email }}</td>
+        <td>{{ std.contact }}</td>
+        <td class="text-center">
+          <button mat-icon-button color="primary" (click)="onEdit(std)">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </td>
+        <td class="text-center">
+          <button mat-icon-button color="warn" (click)="onRemove(std.stdid)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #noStudent>
+  <div class="alert alert-info text-center">
+    No students available.
+  </div>
+</ng-template>

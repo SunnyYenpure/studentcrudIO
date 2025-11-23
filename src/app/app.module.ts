@@ -1,14 +1,35 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
+import { StudentDashboaredComponent } from './componant/student-dashboared/student-dashboared.component';
+import { StudentFormComponent } from './componant/student-form/student-form.component';
+import { StudentListComponent } from './componant/student-list/student-list.component';
+// import { TodoDashboardComponent } from './componant/todo-dashboared/todo-dashboared.component';
+// import { TodoListComponent } from './componant/todo-list/todo-list.component';
+// import { TodoFormComponent } from './componant/todo-form/todo-form.component';
+
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StudentDashboaredComponent,
+    StudentFormComponent,
+    StudentListComponent,
+    // TodoDashboardComponent,
+    // TodoListComponent,
+    // TodoFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
