@@ -1,0 +1,21 @@
+<h3>{{ isineditmode ? 'Update Todo' : 'Add Todo' }}</h3>
+
+<form #todoform="ngForm" (ngSubmit)="ontodoadd()">
+  <div class="form-group">
+    <label for="todoitem">Todo Item</label>
+    <input
+      type="text"
+      id="todoitem"
+      name="todoitem"
+      ngModel
+      required
+      class="form-control">
+  </div>
+
+  <button
+    type="submit"
+    class="btn btn-sm btn-block btn-outline-primary"
+    [disabled]="todoform.invalid">
+    {{ isineditmode ? 'Update Todo' : 'Add Todo' }}
+  </button>
+</form>

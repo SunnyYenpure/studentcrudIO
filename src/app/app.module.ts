@@ -7,9 +7,9 @@ import { AppComponent } from './app.component';
 import { StudentDashboaredComponent } from './componant/student-dashboared/student-dashboared.component';
 import { StudentFormComponent } from './componant/student-form/student-form.component';
 import { StudentListComponent } from './componant/student-list/student-list.component';
-// import { TodoDashboardComponent } from './componant/todo-dashboared/todo-dashboared.component';
-// import { TodoListComponent } from './componant/todo-list/todo-list.component';
-// import { TodoFormComponent } from './componant/todo-form/todo-form.component';
+import { TodoDashboardComponent } from './componant/todo-dashboard/todo-dashboard.component';
+import { TodoFormComponent } from './componant/todo-form/todo-form.component';
+import { TodoListComponent } from './componant/todo-list/todo-list.component';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -20,9 +20,9 @@ import { MatIconModule } from '@angular/material/icon';
     StudentDashboaredComponent,
     StudentFormComponent,
     StudentListComponent,
-    // TodoDashboardComponent,
-    // TodoListComponent,
-    // TodoFormComponent
+    TodoDashboardComponent,
+    TodoFormComponent,
+    TodoListComponent
   ],
   imports: [
     BrowserModule,
