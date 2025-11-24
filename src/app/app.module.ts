@@ -22,7 +22,7 @@ import { MatIconModule } from '@angular/material/icon';
     StudentListComponent,
     TodoDashboardComponent,
     TodoFormComponent,
-    TodoListComponent
+    TodoListComponent,
   ],
   imports: [
     BrowserModule,

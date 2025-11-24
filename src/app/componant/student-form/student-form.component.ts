@@ -9,7 +9,7 @@ import { Istudent } from 'src/app/models/student';
 })
 export class StudentFormComponent implements OnInit, OnChanges {
   @ViewChild('studentform') studentform!: NgForm
-  @Output() emitnewstd: EventEmitter<Istudent> = new EventEmitter()
+  @Output() emitnewstd: EventEmitter<Istudent> = new EventEmitter<Istudent>()
   @Input() selectedStudent: Istudent | null = null;
 
   constructor() { }
@@ -33,7 +33,8 @@ export class StudentFormComponent implements OnInit, OnChanges {
 
     const newstd: Istudent = {
       ...this.studentform.value,
-      stdid: this.selectedStudent ? this.selectedStudent.stdid : this.uuid()
+      // stdid: this.selectedStudent ? this.selectedStudent.stdid : this.uuid()
+      stdid:this.uuid()
     };
 
     this.emitnewstd.emit(newstd);

@@ -28,7 +28,12 @@
 
       <div class="form-group mb-2">
         <label for="contact">Contact</label>
-        <input type="text" class="form-control" id="contact" name="contact" ngModel required #contact="ngModel" />
+        <input type="text" 
+        class="form-control"
+         id="contact" 
+         name="contact"
+          ngModel required
+           #contact="ngModel" />
         <div class="text-danger" *ngIf="contact.invalid && contact.touched">Contact is required</div>
       </div>
 
@@ -38,3 +43,4 @@
     </form>
   </div>
 </div>
+
